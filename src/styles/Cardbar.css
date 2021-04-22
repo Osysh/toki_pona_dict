@@ -1,0 +1,42 @@
+.Cardbar-component {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+.Cardbar-arrow { 
+    width: 100%;
+    background-color: red;
+    padding: 10px 0px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.Arrow-up {
+    grid-row: 1/2;
+}
+
+.Cards-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: 2/3;
+}
+
+.Arrow-down {
+    grid-row: 3/4;
+}
+
+.Card {
+    height: 180px;
+    padding: 0 20px;
+    width: calc(100% - 60px);
+    background-color: aqua;
+    margin: 10px 0px;
+}
+
+.Card-translation p {
+    margin: 5px;
+}
