@@ -4,32 +4,31 @@
   grid-template-columns: 1fr 400px;
   grid-template-rows: 150px 1fr 80px;
   color: #484848;
+  background-color: #F3B3A6;
 }
 
 .Header {
   grid-row: 1/2;
   grid-column: 1/2;
-  background-color: #E6E1CC;
 }
 
 .Main-container {
   grid-row: 2/3;
   grid-column: 1/2;
-  background-color: #E6E1CC;
 }
 
 .Footer {
   grid-row: 3/4;
   grid-column: 1/2;
-  background-color: #E6E1CC;
   display: flex;
   justify-content: center;
+  color: #B98B82;
 }
 
 .Card-bar {
   grid-row: 1/4;
   grid-column: 2/3;
-  background-color: #E6E1CC;
+  background-color: #37515F;
 }
 
 a:visited {
