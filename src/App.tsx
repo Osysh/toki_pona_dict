@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -17,16 +17,12 @@ import { Search } from './components/search';
 function App() {
   const [isNewWordModalOpen, setIsNewWordModalOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    console.log(isNewWordModalOpen)
-  }, [isNewWordModalOpen]);
-
   return (
     <Router>
-      {isNewWordModalOpen && <Modal title="Add a new word" component={<div>Modal</div>} />}
+      {isNewWordModalOpen && <Modal title="Add a new word" component={<div>Modal</div>} ModalClosed={modalStatus => { setIsNewWordModalOpen(!modalStatus) }} />}
       <div className="App">
         
-        <div className="Header"><Header contributeIsOpen={e => { setIsNewWordModalOpen(e); console.log(e) }} /></div>
+        <div className="Header"><Header contributeIsOpen={e => { setIsNewWordModalOpen(e) }} /></div>
         
         <div className="Main-container">
         <Switch>
@@ -36,8 +32,8 @@ function App() {
             </Switch>
         </div>
         <div className="Footer">
-            <Footer />
-          </div>
+          <Footer />
+        </div>
         <div className="Card-bar"><CardBar /></div>
       </div>
     </Router>
